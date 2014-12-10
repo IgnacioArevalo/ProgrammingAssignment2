@@ -1,7 +1,7 @@
 ## [Put comments here that describe what your functions do]
 
 makeCacheMatrix <- function(x = matrix()) {
- m<-NULL
+  m<-NULL
   set<-function(y) {
     x<<-y
     m<<-NULL
@@ -11,11 +11,11 @@ makeCacheMatrix <- function(x = matrix()) {
   getinverse<-function() m
   list(set=set,get=get,
        setinverse=setinverse,
-       getinverse=getinverse)  
+       getinverse=getinverse)
 }
 
 cacheSolve <- function(x, ...) {
- m <- x$getinverse()
+  m <- x$getinverse()
   if(!is.null(m)) {
     message("getting cached data")
     return(m)
